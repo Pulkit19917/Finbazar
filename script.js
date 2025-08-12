@@ -6,4 +6,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector(".shrinkable-header");
+  if (window.scrollY > 50) {
+    header.classList.add("header-shrink");
+  } else {
+    header.classList.remove("header-shrink");
+  }
+});
+</script>
 });
