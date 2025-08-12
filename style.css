@@ -9,9 +9,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: white;
+  background: #003366;
   transition: padding 0.3s ease;
 }
+
+
+
+
 
 
 
@@ -40,7 +44,7 @@ header .logo img {
   align-items: center;
   justify-content: space-between;
   padding: 12px 5%;
-  background: white;
+  background: #003366;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: padding 0.3s ease;
 }
@@ -74,7 +78,7 @@ header .logo img {
 }
 
 .navbar a:hover {
-  color: #003366; /* Accent color */
+  color: #ff6600; /* Accent color */
 }
 
 /* Shrink state */
