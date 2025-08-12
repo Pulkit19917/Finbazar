@@ -169,3 +169,53 @@ button {
 button:hover {
     background: #0055aa;
 }
+/* Hide hamburger on desktop */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  /* Show hamburger button */
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+  }
+
+  /* Initially hide nav on mobile */
+  nav {
+    display: none;
+    width: 100%;
+    background: #003366;
+  }
+
+  /* Show nav when active */
+  nav.active {
+    display: block;
+  }
+
+  /* Nav ul as vertical dropdown */
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid #0059b3;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 20px;
+  }
+}
