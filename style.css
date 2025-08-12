@@ -15,10 +15,6 @@ body {
 
 
 
-
-
-
-
 header {
     display: flex;
     justify-content: space-between;
@@ -78,7 +74,7 @@ header .logo img {
 }
 
 .navbar a:hover {
-  color: #ff6600; /* Accent color */
+  color: #003366; /* Accent color */
 }
 
 /* Shrink state */
