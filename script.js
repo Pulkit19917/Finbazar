@@ -1,10 +1,11 @@
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('nav');
 
-// Toggle navigation with slide animation
+// Toggle navigation with slide animation & icon change
 menuBtn.addEventListener('click', () => {
   nav.classList.toggle('active');
-  
+  menuBtn.classList.toggle('open');
+
   if (nav.classList.contains('active')) {
     nav.style.maxHeight = nav.scrollHeight + "px";
   } else {
@@ -30,6 +31,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     if (window.innerWidth <= 768) {
       nav.classList.remove('active');
       nav.style.maxHeight = "0px";
+      menuBtn.classList.remove('open');
     }
   });
 });
