@@ -60,11 +60,15 @@ nav a:hover {
 .banner {
   text-align: center;
   position: relative;
+  overflow: hidden; /* so zoom doesn't overflow */
 }
 
 .banner img {
   width: 100%;
   height: auto;
+  opacity: 0;
+  transform: scale(1.05);
+  animation: fadeZoom 1.5s ease-out forwards;
 }
 
 .banner h2 {
@@ -77,7 +81,25 @@ nav a:hover {
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 1.8rem;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out forwards;
+  animation-delay: 0.5s;
 }
+
+/* ====== Animations ====== */
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* ====== Sections ====== */
 .products, .about, .contact {
