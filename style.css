@@ -45,16 +45,60 @@ nav a:hover {
   color: #00aaff;
 }
 
-/* Hamburger menu button */
+
 /* Hide hamburger on desktop */
+/* Hamburger menu styling */
 .menu-btn {
   display: none;
-  font-size: 28px;
-  color: white;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
   background: none;
   border: none;
-  cursor: pointer;
-  user-select: none;
+  z-index: 1100;
+}
+
+.menu-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Transform into 'X' */
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu animation */
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav.active {
+    transition: max-height 0.3s ease-in;
+  }
 }
 
 /* Mobile styles */
