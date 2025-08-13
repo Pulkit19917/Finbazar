@@ -270,3 +270,13 @@ button:hover {
     padding: 12px 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+  nav.active {
+    transition: max-height 0.3s ease-in;
+  }
+}
