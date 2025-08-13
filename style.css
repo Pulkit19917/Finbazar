@@ -148,6 +148,18 @@ nav a:hover {
   background: #0055aa;
 }
 
+/* ====== Product Card Animation ====== */
+.product-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.product-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ====== Forms ====== */
 form {
   display: flex;
